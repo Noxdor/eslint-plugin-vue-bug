@@ -40,13 +40,12 @@ import { ref } from "vue";
 defineProps<{ msg: string }>();
 
 const emit = defineEmits<{
-  click: [];
   test: [name: string];
+  // (e: "test2", name: string): void;
 }>();
 
 const count = ref(0);
 
-emit("click");
 emit("test", "vue");
 </script>
 
